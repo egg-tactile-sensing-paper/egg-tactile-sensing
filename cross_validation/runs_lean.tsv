@@ -1,0 +1,25 @@
+# model	tag	data	init	arm
+yolov8m	grouped-fold0	cross_validation/folds/fold0/data.yaml	pretrained	grouped-pretrained
+yolov8m	grouped-fold1	cross_validation/folds/fold1/data.yaml	pretrained	grouped-pretrained
+yolov8m	grouped-fold2	cross_validation/folds/fold2/data.yaml	pretrained	grouped-pretrained
+yolov8m	grouped-fold3	cross_validation/folds/fold3/data.yaml	pretrained	grouped-pretrained
+yolov8m	grouped-fold4	cross_validation/folds/fold4/data.yaml	pretrained	grouped-pretrained
+yolov9m	grouped-fold0	cross_validation/folds/fold0/data.yaml	pretrained	grouped-pretrained
+yolov9m	grouped-fold1	cross_validation/folds/fold1/data.yaml	pretrained	grouped-pretrained
+yolov9m	grouped-fold2	cross_validation/folds/fold2/data.yaml	pretrained	grouped-pretrained
+yolov9m	grouped-fold3	cross_validation/folds/fold3/data.yaml	pretrained	grouped-pretrained
+yolov9m	grouped-fold4	cross_validation/folds/fold4/data.yaml	pretrained	grouped-pretrained
+yolov10m	grouped-fold0	cross_validation/folds/fold0/data.yaml	pretrained	grouped-pretrained
+yolov10m	grouped-fold1	cross_validation/folds/fold1/data.yaml	pretrained	grouped-pretrained
+yolov10m	grouped-fold2	cross_validation/folds/fold2/data.yaml	pretrained	grouped-pretrained
+yolov10m	grouped-fold3	cross_validation/folds/fold3/data.yaml	pretrained	grouped-pretrained
+yolov10m	grouped-fold4	cross_validation/folds/fold4/data.yaml	pretrained	grouped-pretrained
+yolo11m	grouped-fold0	cross_validation/folds/fold0/data.yaml	pretrained	grouped-pretrained
+yolo11m	grouped-fold1	cross_validation/folds/fold1/data.yaml	pretrained	grouped-pretrained
+yolo11m	grouped-fold2	cross_validation/folds/fold2/data.yaml	pretrained	grouped-pretrained
+yolo11m	grouped-fold3	cross_validation/folds/fold3/data.yaml	pretrained	grouped-pretrained
+yolo11m	grouped-fold4	cross_validation/folds/fold4/data.yaml	pretrained	grouped-pretrained
+yolov8m	published	cross_validation/folds/published/data.yaml	pretrained	published-pretrained
+yolov9m	published	cross_validation/folds/published/data.yaml	pretrained	published-pretrained
+yolov10m	published	cross_validation/folds/published/data.yaml	pretrained	published-pretrained
+yolo11m	published	cross_validation/folds/published/data.yaml	pretrained	published-pretrained

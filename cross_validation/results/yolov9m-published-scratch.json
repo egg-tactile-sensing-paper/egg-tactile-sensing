@@ -1,0 +1,56 @@
+{
+  "model": "yolov9m",
+  "tag": "published",
+  "init": "scratch",
+  "epochs": 350,
+  "imgsz": 640,
+  "batch": 16,
+  "seed": 0,
+  "data": "cv/folds/published/data.yaml",
+  "data_yaml": "# the release's own 70/20/10 image-level split, for the leakage comparison\npath: data\ntrain: images/train\nval: images/val\ntest: images/test\n\nnames:\n  0: normal_egg\n  1: broken_egg\n",
+  "best_checkpoint": "work/runs/yolov9m-published-scratch/weights/best.pt",
+  "minutes": 16.8,
+  "train_images": 264,
+  "val_images": 75,
+  "test_images": 38,
+  "val": {
+    "precision": 0.8685210219268191,
+    "recall": 0.851219512195122,
+    "mAP50": 0.8726445541153764,
+    "mAP50_95": 0.6790655701552124,
+    "per_class": {
+      "normal_egg": {
+        "precision": 0.8427021325281298,
+        "recall": 0.9024390243902439,
+        "mAP50": 0.8919771813982267,
+        "mAP50_95": 0.6941809867154031
+      },
+      "broken_egg": {
+        "precision": 0.8943399113255086,
+        "recall": 0.8,
+        "mAP50": 0.8533119268325261,
+        "mAP50_95": 0.6639501535950217
+      }
+    }
+  },
+  "test": {
+    "precision": 0.9176498729659728,
+    "recall": 0.9173669467787114,
+    "mAP50": 0.9298628717077314,
+    "mAP50_95": 0.7424533986457467,
+    "per_class": {
+      "normal_egg": {
+        "precision": 0.9072805414351175,
+        "recall": 0.9523809523809523,
+        "mAP50": 0.960531818181818,
+        "mAP50_95": 0.7670371878121875
+      },
+      "broken_egg": {
+        "precision": 0.9280192044968281,
+        "recall": 0.8823529411764706,
+        "mAP50": 0.8991939252336448,
+        "mAP50_95": 0.7178696094793058
+      }
+    }
+  }
+}

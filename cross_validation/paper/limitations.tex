@@ -1,0 +1,34 @@
+% --- limitations ---
+\paragraph{Class is confounded with acquisition session, and we tested whether it matters.}
+The dataset was collected in class order: every whole-egg episode was recorded before every
+cracked-egg episode (whole Dec~05 14:52--Dec~05 16:03, cracked Dec~05 16:22--Dec~06 15:38
+UTC), with the class boundary falling at a session break. Any systematic change across that
+boundary -- gel wear, membrane replacement, illumination from the sensor's internal LEDs,
+mounting pressure, ambient temperature -- is correlated with the label and is in principle
+available as a shortcut, and no partition of these episodes can separate the two. Rather
+than leave that as a caveat we measured it.
+
+Episode 11 is the one cracked egg recorded inside the whole-egg session, nineteen minutes after
+the last whole-egg episode ends; every other cracked egg belongs to the following session.
+Training on the whole-egg session plus the cracked session's other eggs and then testing on
+that episode asks the question directly: a detector keyed to session appearance should fail
+there, having seen only whole eggs from that session, while a detector keyed to crack
+morphology should not. Against a control test set of cracked eggs drawn from the cracked
+session with identical training data, the cross-session egg is detected equally well -- mean
+AP$_{50}$ difference +0.011 over the four detectors, with recall between 0.778 and 1.000. The
+shortcut is available but the models are not using it, so the cross-validated scores are not
+explained by the confound.
+
+That test rests on a single egg, nine frames, and that is the most the dataset permits: it
+contains exactly one cracked episode outside the cracked session and no whole-egg episode
+inside it, so no larger version of the probe and no reverse direction exist. A weaker
+session effect would not be visible at this sample size. Re-acquiring a modest set of
+episodes with the two classes interleaved within each session remains the way to settle it
+-- now to confirm what one egg indicates, rather than to rule out a likely artefact.
+
+\paragraph{Scale.} With 19 eggs the sample is small, and the grouped protocol makes that
+explicit rather than hiding it: the spread across folds is wider than the differences
+between architectures, which is why we quote a baseline range instead of a ranking. A single
+split cannot expose that spread, and so invites exactly the ranking the data cannot support.
+The absolute numbers here should be read as evidence about the sensing modality, not as a
+benchmark result.

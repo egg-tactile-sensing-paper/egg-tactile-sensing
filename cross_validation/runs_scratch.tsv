@@ -1,0 +1,21 @@
+# model	tag	data	init	arm	epochs
+yolov8m	grouped-fold0	cross_validation/folds/fold0/data.yaml	scratch	grouped-scratch	350
+yolov8m	grouped-fold1	cross_validation/folds/fold1/data.yaml	scratch	grouped-scratch	350
+yolov8m	grouped-fold2	cross_validation/folds/fold2/data.yaml	scratch	grouped-scratch	350
+yolov8m	grouped-fold3	cross_validation/folds/fold3/data.yaml	scratch	grouped-scratch	350
+yolov8m	grouped-fold4	cross_validation/folds/fold4/data.yaml	scratch	grouped-scratch	350
+yolov9m	grouped-fold0	cross_validation/folds/fold0/data.yaml	scratch	grouped-scratch	350
+yolov9m	grouped-fold1	cross_validation/folds/fold1/data.yaml	scratch	grouped-scratch	350
+yolov9m	grouped-fold2	cross_validation/folds/fold2/data.yaml	scratch	grouped-scratch	350
+yolov9m	grouped-fold3	cross_validation/folds/fold3/data.yaml	scratch	grouped-scratch	350
+yolov9m	grouped-fold4	cross_validation/folds/fold4/data.yaml	scratch	grouped-scratch	350
+yolov10m	grouped-fold0	cross_validation/folds/fold0/data.yaml	scratch	grouped-scratch	350
+yolov10m	grouped-fold1	cross_validation/folds/fold1/data.yaml	scratch	grouped-scratch	350
+yolov10m	grouped-fold2	cross_validation/folds/fold2/data.yaml	scratch	grouped-scratch	350
+yolov10m	grouped-fold3	cross_validation/folds/fold3/data.yaml	scratch	grouped-scratch	350
+yolov10m	grouped-fold4	cross_validation/folds/fold4/data.yaml	scratch	grouped-scratch	350
+yolo11m	grouped-fold0	cross_validation/folds/fold0/data.yaml	scratch	grouped-scratch	350
+yolo11m	grouped-fold1	cross_validation/folds/fold1/data.yaml	scratch	grouped-scratch	350
+yolo11m	grouped-fold2	cross_validation/folds/fold2/data.yaml	scratch	grouped-scratch	350
+yolo11m	grouped-fold3	cross_validation/folds/fold3/data.yaml	scratch	grouped-scratch	350
+yolo11m	grouped-fold4	cross_validation/folds/fold4/data.yaml	scratch	grouped-scratch	350

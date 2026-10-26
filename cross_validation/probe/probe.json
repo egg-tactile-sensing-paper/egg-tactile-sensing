@@ -1,0 +1,69 @@
+{
+ "arms": {
+  "cross": {
+   "episodes": [
+    11
+   ],
+   "n_episodes": 1,
+   "n_images": 9,
+   "episodes_per_class": {
+    "broken_egg": 1
+   },
+   "data_yaml": "cross_validation/probe/cross/data.yaml",
+   "session_day": [
+    20062
+   ]
+  },
+  "same": {
+   "episodes": [
+    18,
+    19
+   ],
+   "n_episodes": 2,
+   "n_images": 34,
+   "episodes_per_class": {
+    "broken_egg": 2
+   },
+   "data_yaml": "cross_validation/probe/same/data.yaml",
+   "session_day": [
+    20063
+   ]
+  }
+ },
+ "train": {
+  "episodes": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   10,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "n_episodes": 14,
+  "n_images": 266,
+  "episodes_per_class": {
+   "normal_egg": 9,
+   "broken_egg": 5
+  }
+ },
+ "val": {
+  "episodes": [
+   9,
+   17
+  ],
+  "n_episodes": 2,
+  "n_images": 68,
+  "episodes_per_class": {
+   "normal_egg": 1,
+   "broken_egg": 1
+  }
+ }
+}

@@ -1,0 +1,278 @@
+{
+  "episode_gap_s": 30.0,
+  "episodes": 19,
+  "outer_folds": 5,
+  "inner_groups": 5,
+  "classes": {
+    "0": "normal_egg",
+    "1": "broken_egg"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train": {
+        "episodes": [
+          1,
+          2,
+          5,
+          7,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          17,
+          19
+        ],
+        "n_episodes": 12,
+        "n_images": 239,
+        "episodes_per_class": {
+          "normal_egg": 6,
+          "broken_egg": 6
+        }
+      },
+      "val": {
+        "episodes": [
+          3,
+          6,
+          12,
+          18
+        ],
+        "n_episodes": 4,
+        "n_images": 55,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "test": {
+        "episodes": [
+          4,
+          8,
+          16
+        ],
+        "n_episodes": 3,
+        "n_images": 83,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 1
+        }
+      },
+      "data_yaml": "cross_validation/folds/fold0/data.yaml"
+    },
+    {
+      "fold": 1,
+      "train": {
+        "episodes": [
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          13,
+          14,
+          15,
+          16,
+          19
+        ],
+        "n_episodes": 11,
+        "n_images": 238,
+        "episodes_per_class": {
+          "normal_egg": 6,
+          "broken_egg": 5
+        }
+      },
+      "val": {
+        "episodes": [
+          3,
+          6,
+          12,
+          18
+        ],
+        "n_episodes": 4,
+        "n_images": 55,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "test": {
+        "episodes": [
+          1,
+          9,
+          11,
+          17
+        ],
+        "n_episodes": 4,
+        "n_images": 84,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "data_yaml": "cross_validation/folds/fold1/data.yaml"
+    },
+    {
+      "fold": 2,
+      "train": {
+        "episodes": [
+          1,
+          4,
+          5,
+          8,
+          9,
+          10,
+          11,
+          15,
+          16,
+          17,
+          19
+        ],
+        "n_episodes": 11,
+        "n_images": 250,
+        "episodes_per_class": {
+          "normal_egg": 6,
+          "broken_egg": 5
+        }
+      },
+      "val": {
+        "episodes": [
+          3,
+          6,
+          12,
+          18
+        ],
+        "n_episodes": 4,
+        "n_images": 55,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "test": {
+        "episodes": [
+          2,
+          7,
+          13,
+          14
+        ],
+        "n_episodes": 4,
+        "n_images": 72,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "data_yaml": "cross_validation/folds/fold2/data.yaml"
+    },
+    {
+      "fold": 3,
+      "train": {
+        "episodes": [
+          1,
+          2,
+          5,
+          6,
+          8,
+          9,
+          11,
+          13,
+          15,
+          16,
+          17,
+          18
+        ],
+        "n_episodes": 12,
+        "n_images": 249,
+        "episodes_per_class": {
+          "normal_egg": 6,
+          "broken_egg": 6
+        }
+      },
+      "val": {
+        "episodes": [
+          4,
+          7,
+          14
+        ],
+        "n_episodes": 3,
+        "n_images": 53,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 1
+        }
+      },
+      "test": {
+        "episodes": [
+          3,
+          10,
+          12,
+          19
+        ],
+        "n_episodes": 4,
+        "n_images": 75,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "data_yaml": "cross_validation/folds/fold3/data.yaml"
+    },
+    {
+      "fold": 4,
+      "train": {
+        "episodes": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          13,
+          14,
+          16,
+          17
+        ],
+        "n_episodes": 11,
+        "n_images": 248,
+        "episodes_per_class": {
+          "normal_egg": 6,
+          "broken_egg": 5
+        }
+      },
+      "val": {
+        "episodes": [
+          1,
+          10,
+          11,
+          19
+        ],
+        "n_episodes": 4,
+        "n_images": 66,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "test": {
+        "episodes": [
+          5,
+          6,
+          15,
+          18
+        ],
+        "n_episodes": 4,
+        "n_images": 63,
+        "episodes_per_class": {
+          "normal_egg": 2,
+          "broken_egg": 2
+        }
+      },
+      "data_yaml": "cross_validation/folds/fold4/data.yaml"
+    }
+  ],
+  "published_data_yaml": "cross_validation/folds/published/data.yaml"
+}

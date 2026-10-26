@@ -1,0 +1,56 @@
+{
+  "model": "yolov9m",
+  "tag": "grouped-fold1",
+  "init": "pretrained",
+  "epochs": 100,
+  "imgsz": 640,
+  "batch": 16,
+  "seed": 0,
+  "data": "cv/folds/fold1/data.yaml",
+  "data_yaml": "# grouped CV fold 1 of 5: the test episodes are unseen eggs\npath: cv/folds/fold1\ntrain: images/train\nval: images/val\ntest: images/test\n\nnames:\n  0: normal_egg\n  1: broken_egg\n",
+  "best_checkpoint": "work/runs/yolov9m-grouped-fold1-pretrained/weights/best.pt",
+  "minutes": 8.8,
+  "train_images": 238,
+  "val_images": 55,
+  "test_images": 84,
+  "val": {
+    "precision": 0.766624879848377,
+    "recall": 0.9333333333333333,
+    "mAP50": 0.9131359863392878,
+    "mAP50_95": 0.7065169642211145,
+    "per_class": {
+      "normal_egg": {
+        "precision": 0.7210545213488667,
+        "recall": 1.0,
+        "mAP50": 0.9161250000000001,
+        "mAP50_95": 0.68644789830688
+      },
+      "broken_egg": {
+        "precision": 0.8121952383478874,
+        "recall": 0.8666666666666667,
+        "mAP50": 0.9101469726785757,
+        "mAP50_95": 0.726586030135349
+      }
+    }
+  },
+  "test": {
+    "precision": 0.8800929915022621,
+    "recall": 0.8813747228381374,
+    "mAP50": 0.9214794506430064,
+    "mAP50_95": 0.6496673678409701,
+    "per_class": {
+      "normal_egg": {
+        "precision": 0.8995224502033543,
+        "recall": 0.9090909090909091,
+        "mAP50": 0.9368083063796611,
+        "mAP50_95": 0.7038344849763416
+      },
+      "broken_egg": {
+        "precision": 0.8606635328011698,
+        "recall": 0.8536585365853658,
+        "mAP50": 0.9061505949063519,
+        "mAP50_95": 0.5955002507055986
+      }
+    }
+  }
+}

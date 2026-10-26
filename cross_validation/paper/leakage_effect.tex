@@ -1,0 +1,15 @@
+% --- size of the protocol effect ---
+\paragraph{What the leakage was worth.} Holding the training recipe fixed and changing only
+the partition: with COCO-pretrained weights, mAP$_{50}$ falls from 0.919 on the released split to
+0.880 under grouped cross-validation, a drop of 0.04; with the released from-scratch recipe,
+mAP$_{50}$ falls from 0.942 on the released split to 0.861 under grouped cross-validation, a drop
+of 0.08. The premium is 2.0 times as large for the recipe the released code actually uses,
+which is the ordering one would expect: a detector initialised at random has no external
+prior to fall back on, so it leans harder on the training frames themselves and gains more
+when near-duplicates of its test images sit in the training set. Pooling the per-fold
+detections lowers the estimate further, to 0.765--0.813 from scratch, 0.812--0.849
+pretrained, since one confidence ranking over all 377 images is not flattered by whichever
+fold happened to hold few and easy instances. We take the per-fold mean as the headline and
+the pooled value as the conservative bound. On either reading the released protocol is
+optimistic by a visible margin, without the leak manufacturing the result: the detectors
+still separate cracked from whole eggs whose episodes they have never seen.

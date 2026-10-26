@@ -1,0 +1,56 @@
+{
+  "model": "yolov8m",
+  "tag": "grouped-fold3",
+  "init": "pretrained",
+  "epochs": 100,
+  "imgsz": 640,
+  "batch": 16,
+  "seed": 0,
+  "data": "cv/folds/fold3/data.yaml",
+  "data_yaml": "# grouped CV fold 3 of 5: the test episodes are unseen eggs\npath: cv/folds/fold3\ntrain: images/train\nval: images/val\ntest: images/test\n\nnames:\n  0: normal_egg\n  1: broken_egg\n",
+  "best_checkpoint": "work/runs/yolov8m-grouped-fold3-pretrained/weights/best.pt",
+  "minutes": 6.9,
+  "train_images": 249,
+  "val_images": 53,
+  "test_images": 75,
+  "val": {
+    "precision": 0.9562637630432625,
+    "recall": 0.9099130326510221,
+    "mAP50": 0.9292955722233796,
+    "mAP50_95": 0.6200970249029558,
+    "per_class": {
+      "normal_egg": {
+        "precision": 0.9717699226825339,
+        "recall": 0.9837172165712225,
+        "mAP50": 0.9894444444444442,
+        "mAP50_95": 0.7296281065945438
+      },
+      "broken_egg": {
+        "precision": 0.9407576034039912,
+        "recall": 0.8361088487308217,
+        "mAP50": 0.869146700002315,
+        "mAP50_95": 0.5105659432113676
+      }
+    }
+  },
+  "test": {
+    "precision": 0.8312391390963249,
+    "recall": 0.8965954520058355,
+    "mAP50": 0.9216613707355366,
+    "mAP50_95": 0.7226260899614214,
+    "per_class": {
+      "normal_egg": {
+        "precision": 0.8667402892072856,
+        "recall": 0.8869409040116708,
+        "mAP50": 0.9709536698296705,
+        "mAP50_95": 0.7423364768666567
+      },
+      "broken_egg": {
+        "precision": 0.7957379889853641,
+        "recall": 0.90625,
+        "mAP50": 0.8723690716414025,
+        "mAP50_95": 0.7029157030561861
+      }
+    }
+  }
+}

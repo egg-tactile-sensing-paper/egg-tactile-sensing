@@ -1,0 +1,11 @@
+% --- what the previously reported numbers measure ---
+\paragraph{What the released numbers measure.} The released training script calls
+Ultralytics' ``train`` entry point and nothing else, so the metrics it prints at the end of
+a run are those of the validation pass used for checkpoint selection, not of the held-out
+test split. Re-running that exact configuration and scoring both splits with our own
+evaluation code reproduces the originally reported table on the validation split (mAP$_{50}$
+0.849 against 0.838 as printed, averaged over the four detectors) and not on the test split,
+where the same models reach 0.942. Per detector the printed values lie within 0.027 of our
+validation scores and 0.074--0.123 below our test scores. We therefore read the previously
+reported figures as validation metrics and quote test metrics throughout, which raises
+rather than lowers the released configuration's apparent accuracy.

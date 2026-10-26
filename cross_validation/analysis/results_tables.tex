@@ -1,0 +1,62 @@
+% Grouped CV (pretrained)
+\begin{tabular}{lcccc}
+\toprule
+Model & Precision & Recall & mAP50 & mAP50:95 \\
+\midrule
+YOLOv8m & $0.850 \pm 0.073$ & $0.862 \pm 0.029$ & $0.898 \pm 0.035$ & $0.676 \pm 0.030$ \\
+YOLOv9m & $0.832 \pm 0.050$ & $0.854 \pm 0.025$ & $0.878 \pm 0.038$ & $0.637 \pm 0.070$ \\
+YOLOv10m & $0.861 \pm 0.067$ & $0.843 \pm 0.042$ & $0.874 \pm 0.047$ & $0.646 \pm 0.054$ \\
+YOLOv11m & $0.846 \pm 0.071$ & $0.850 \pm 0.030$ & $0.868 \pm 0.038$ & $0.640 \pm 0.047$ \\
+\bottomrule
+\end{tabular}
+
+% Grouped CV (from scratch)
+\begin{tabular}{lcccc}
+\toprule
+Model & Precision & Recall & mAP50 & mAP50:95 \\
+\midrule
+YOLOv8m & $0.802 \pm 0.066$ & $0.844 \pm 0.071$ & $0.877 \pm 0.054$ & $0.644 \pm 0.066$ \\
+YOLOv9m & $0.803 \pm 0.048$ & $0.811 \pm 0.052$ & $0.848 \pm 0.023$ & $0.618 \pm 0.029$ \\
+YOLOv10m & $0.783 \pm 0.064$ & $0.840 \pm 0.035$ & $0.837 \pm 0.073$ & $0.608 \pm 0.064$ \\
+YOLOv11m & $0.859 \pm 0.025$ & $0.843 \pm 0.037$ & $0.883 \pm 0.025$ & $0.661 \pm 0.043$ \\
+\bottomrule
+\end{tabular}
+
+% Published split (pretrained)
+\begin{tabular}{lcccc}
+\toprule
+Model & Precision & Recall & mAP50 & mAP50:95 \\
+\midrule
+YOLOv8m & $0.948$ & $0.904$ & $0.937$ & $0.749$ \\
+YOLOv9m & $0.914$ & $0.902$ & $0.938$ & $0.747$ \\
+YOLOv10m & $0.905$ & $0.822$ & $0.862$ & $0.653$ \\
+YOLOv11m & $0.876$ & $0.929$ & $0.941$ & $0.717$ \\
+\bottomrule
+\end{tabular}
+
+% Published split (from scratch)
+\begin{tabular}{lcccc}
+\toprule
+Model & Precision & Recall & mAP50 & mAP50:95 \\
+\midrule
+YOLOv8m & $0.933$ & $0.852$ & $0.951$ & $0.748$ \\
+YOLOv9m & $0.918$ & $0.917$ & $0.930$ & $0.742$ \\
+YOLOv10m & $0.780$ & $0.947$ & $0.934$ & $0.734$ \\
+YOLOv11m & $0.888$ & $0.909$ & $0.952$ & $0.764$ \\
+\bottomrule
+\end{tabular}
+
+% session-confound probe
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{AP50} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Model & cross & same & cross & same \\
+\midrule
+YOLOv8m & $0.778$ & $0.833$ & $0.877$ & $0.956$ \\
+YOLOv9m & $1.000$ & $0.909$ & $0.995$ & $0.944$ \\
+YOLOv10m & $0.995$ & $0.901$ & $0.984$ & $0.933$ \\
+YOLOv11m & $0.997$ & $0.889$ & $0.995$ & $0.972$ \\
+\bottomrule
+\end{tabular}
+

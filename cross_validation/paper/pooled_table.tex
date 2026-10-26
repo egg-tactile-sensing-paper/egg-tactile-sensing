@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\small
+\caption{Pooled grouped cross-validation: the per-fold detections are concatenated and scored as one set, so all 377 images contribute under a single confidence ranking rather than being averaged as 5 small per-fold scores. This is the conservative estimate of the two aggregates.}
+\label{tab:pooled}
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{Random init, 350 ep} & \multicolumn{2}{c}{COCO-pretrained, 100 ep} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Model & mAP$_{50}$ & mAP$_{50:95}$ & mAP$_{50}$ & mAP$_{50:95}$ \\
+\midrule
+YOLOv8m & $0.771$ & $0.559$ & $0.849$ & $0.635$ \\
+YOLOv9m & $0.771$ & $0.552$ & $0.812$ & $0.594$ \\
+YOLOv10m & $0.765$ & $0.556$ & $0.819$ & $0.598$ \\
+YOLOv11m & $0.813$ & $0.604$ & $0.821$ & $0.601$ \\
+\bottomrule
+\end{tabular}
+\end{table}

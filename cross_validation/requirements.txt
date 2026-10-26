@@ -1,0 +1,16 @@
+# Versions used for every run reported in the paper (Python 3.10.17, CUDA 12.1).
+# torch/torchvision come from the PyTorch cu121 index:
+#   pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+torchvision==0.20.1
+ultralytics==8.4.189
+numpy==2.2.6
+opencv-python==5.0.0.93
+pillow==12.3.0
+PyYAML==6.0.3
+matplotlib==3.10.9
+psutil==7.2.2
+
+# Pulled in by ultralytics; pinned here because the pooled metric is computed through it.
+torchmetrics==1.9.0
+ultralytics-thop==2.2.3

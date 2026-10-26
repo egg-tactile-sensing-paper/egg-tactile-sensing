@@ -1,0 +1,13 @@
+# model	tag	data	init	arm	epochs
+yolov8m	probe-cross	cross_validation/probe/cross/data.yaml	pretrained	probe-cross	100
+yolov9m	probe-cross	cross_validation/probe/cross/data.yaml	pretrained	probe-cross	100
+yolov10m	probe-cross	cross_validation/probe/cross/data.yaml	pretrained	probe-cross	100
+yolo11m	probe-cross	cross_validation/probe/cross/data.yaml	pretrained	probe-cross	100
+yolov8m	probe-same	cross_validation/probe/same/data.yaml	pretrained	probe-same	100
+yolov9m	probe-same	cross_validation/probe/same/data.yaml	pretrained	probe-same	100
+yolov10m	probe-same	cross_validation/probe/same/data.yaml	pretrained	probe-same	100
+yolo11m	probe-same	cross_validation/probe/same/data.yaml	pretrained	probe-same	100
+yolov8m	published	cross_validation/folds/published/data.yaml	scratch	published-scratch	350
+yolov9m	published	cross_validation/folds/published/data.yaml	scratch	published-scratch	350
+yolov10m	published	cross_validation/folds/published/data.yaml	scratch	published-scratch	350
+yolo11m	published	cross_validation/folds/published/data.yaml	scratch	published-scratch	350

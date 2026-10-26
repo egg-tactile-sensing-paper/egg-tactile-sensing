@@ -1,0 +1,42 @@
+% --- replaces the split description in the experimental setup ---
+\paragraph{Unit of evaluation.} The 377 tactile images are not 377 independent observations.
+The GelSight frames are captured as continuous bursts while the sensor is held against one
+egg, and the acquisition time of every frame survives in its filename. Clustering frames by
+timestamp (a gap above 30\,s starts a new burst) recovers 19 contact episodes, 10 of whole
+eggs and 9 of cracked eggs (Table~\ref{tab:episodes}); within an episode successive frames
+are a median 1.43\,s apart and differ only slightly. The effective sample size of the
+dataset is therefore 19 eggs, not 377 images.
+
+The released split assigns images at random, which places near-duplicate frames of the same
+physical egg on both sides of the partition: 18 of the 19 episodes appear in more than one
+split, and every one of the 38 test images comes from an episode that also contributes a
+training or validation frame. (The export contains no byte-identical or augmented copies;
+the overlap is between distinct but adjacent frames of one continuous contact.) A score
+computed on that split measures recall of eggs the detector has already seen, and because
+the 38 test images are spread over 16 already-seen eggs it also carries no usable estimate
+of variance.
+
+\paragraph{Grouped cross-validation.} We therefore re-evaluate every detector with 5-fold
+cross-validation grouped by contact episode and stratified by class. Each fold holds out
+3--4 complete episodes (63--84 images, both classes always present) for testing and draws a
+disjoint set of 3--4 episodes from the remaining pool for checkpoint selection, leaving
+238--250 images for training (Table~\ref{tab:folds}). Every episode is held out exactly
+once, so the 5 test sets partition all 377 images and each image is scored by exactly one
+model that never saw its egg.
+
+We report two aggregates, because they answer different questions. The mean and standard
+deviation over folds describe how much the score moves when the held-out eggs change, which
+is the quantity the released single split cannot provide. The pooled score instead
+concatenates the per-fold detections and computes one average precision over all 377 images
+under a single confidence ranking; it is the stricter and more directly comparable number,
+since averaging five small per-fold APs rewards folds that happen to contain few, easy
+instances. The gap between the two aggregates is itself a reading of how little data each
+fold holds.
+
+\paragraph{Arms.} So that the protocol change is not confounded with a change of training
+recipe, we run a crossed design: both the released image-level split and the grouped folds,
+each with both the released initialisation (random weights, 350 epochs) and COCO-pretrained
+weights fine-tuned for 100 epochs. Everything else -- architecture family, image size, batch
+size, augmentation, seed -- is held fixed, and all four arms are scored by the same
+evaluation code on the test split. The effect of the protocol is then read within a single
+initialisation, and vice versa.

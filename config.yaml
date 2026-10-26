@@ -1,0 +1,10 @@
+path: ./data
+train: images/train 
+val: images/val 
+test: images/test
+
+# Classes
+names:
+  0: normal_egg
+  1: broken_egg
+

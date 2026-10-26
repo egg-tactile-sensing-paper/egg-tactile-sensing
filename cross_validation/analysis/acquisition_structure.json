@@ -1,0 +1,22 @@
+{
+  "images": 377,
+  "instances": 387,
+  "instances_per_class": {
+    "normal_egg": 207,
+    "broken_egg": 180
+  },
+  "published_split": {
+    "train": 264,
+    "test": 38,
+    "val": 75
+  },
+  "episode_gap_s": 30.0,
+  "episodes": 19,
+  "episodes_per_class": {
+    "normal_egg": 10,
+    "broken_egg": 9
+  },
+  "episodes_in_multiple_splits": 18,
+  "test_images_sharing_an_episode": 38,
+  "median_within_contact_gap_s": 1.43
+}

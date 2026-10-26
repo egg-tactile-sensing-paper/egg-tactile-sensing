@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering\small
+\caption{Composition of the 5 grouped folds. Episodes, not images, are the unit of
+partition, so no frame of a held-out egg is seen in training or model selection. Each
+episode is held out exactly once, so the 5 test sets partition all 377 images.
+Validation episodes are drawn from the remaining pool and used only for checkpoint
+selection.}
+\label{tab:folds}
+\begin{tabular}{rrrrrrrcl}
+\toprule
+& \multicolumn{2}{c}{train} & \multicolumn{2}{c}{val} & \multicolumn{2}{c}{test} & & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+fold & ep. & img & ep. & img & ep. & img & wh./cr. & held-out episodes \\
+\midrule
+0 & 12 & 239 & 4 & 55 & 3 & 83 & 2/1 & 4, 8, 16 \\
+1 & 11 & 238 & 4 & 55 & 4 & 84 & 2/2 & 1, 9, 11, 17 \\
+2 & 11 & 250 & 4 & 55 & 4 & 72 & 2/2 & 2, 7, 13, 14 \\
+3 & 12 & 249 & 3 & 53 & 4 & 75 & 2/2 & 3, 10, 12, 19 \\
+4 & 11 & 248 & 4 & 66 & 4 & 63 & 2/2 & 5, 6, 15, 18 \\
+\bottomrule
+\end{tabular}
+\end{table}

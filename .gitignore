@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+
+# Ultralytics label caches
+*.cache
+
+# Generated fold and probe trees: symlinks into data/ plus machine-specific data.yaml
+# files. make_folds.py and make_probe.py rebuild them from the committed manifests.
+cross_validation/folds/fold*/
+cross_validation/folds/published/
+cross_validation/probe/cross/
+cross_validation/probe/same/
+
+# Checkpoints and ultralytics run directories (TACTILE_WORK)
+cross_validation/work/
+
+# Cluster job wrappers: one site's partitions and account
+cross_validation/scripts/
+
+venv/
